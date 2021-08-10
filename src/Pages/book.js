@@ -64,54 +64,6 @@ const BookMass = () => {
                   ലഭ്യമായ സീറ്റുകൾ: <span>04</span>
                 </p>
               </div>{" "}
-              <div className="item">
-                <p className="item__date">
-                  <MdDateRange />
-                  14-10-2020
-                </p>
-                <p className="item__datebig">14 ഞായര്‍</p>
-                <p className="item__type">ഒന്നാം കുർബാന</p>
-                <p className="item__descrip">സമയം:2.00 PM</p>
-
-                <p className="item__available item__descrip">
-                  മൊത്തം സീറ്റുകൾ:40
-                </p>
-                <p className="item__total item__descrip">
-                  ലഭ്യമായ സീറ്റുകൾ: <span>04</span>
-                </p>
-              </div>
-              <div className="item">
-                <p className="item__date">
-                  <MdDateRange />
-                  14-10-2020
-                </p>
-                <p className="item__datebig">14 ഞായര്‍</p>
-                <p className="item__type">ഒന്നാം കുർബാന</p>
-                <p className="item__descrip">സമയം:2.00 PM</p>
-
-                <p className="item__available item__descrip">
-                  മൊത്തം സീറ്റുകൾ:40
-                </p>
-                <p className="item__total item__descrip">
-                  ലഭ്യമായ സീറ്റുകൾ: <span>04</span>
-                </p>
-              </div>
-              <div className="item">
-                <p className="item__date">
-                  <MdDateRange />
-                  14-10-2020
-                </p>
-                <p className="item__datebig">14 ഞായര്‍</p>
-                <p className="item__type">ഒന്നാം കുർബാന</p>
-                <p className="item__descrip">സമയം:2.00 PM</p>
-
-                <p className="item__available item__descrip">
-                  മൊത്തം സീറ്റുകൾ:40
-                </p>
-                <p className="item__total item__descrip">
-                  ലഭ്യമായ സീറ്റുകൾ: <span>04</span>
-                </p>
-              </div>
             </div>
           </div>
         </div>
