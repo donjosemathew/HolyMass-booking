@@ -1,0 +1,106 @@
+h3 {
+  font-family: "Baloo Chettan 2", cursive;
+  color: rgba(255, 255, 255, 0.808);
+  width: 100%;
+  text-align: left;
+  font-size: 2rem;
+}
+.bookmass {
+  min-height: 100vh;
+  height: auto;
+  @media only screen and (max-width: 56.25em) {
+    height: auto;
+  }
+}
+.sectionbook {
+  width: 90%;
+  &__list {
+    //padding: 1rem;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+    @media only screen and (max-width: 56.25em) {
+      grid-template-columns: repeat(1, 1fr);
+      margin-top: 2rem;
+    }
+  }
+}
+.item {
+  width: 80%;
+  padding: 2rem;
+  align-self: center;
+  justify-self: center;
+  margin: 1rem;
+  border-radius: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.979);
+  transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+  @media only screen and (max-width: 56.25em) {
+    margin-top: 2rem;
+  }
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.02);
+    background-color: rgb(255, 255, 255);
+  }
+  &__date {
+    width: 100%;
+    font-weight: 500;
+    text-align: right;
+    color: #424242;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: row;
+  }
+  &__datebig {
+    font-size: 2.7rem;
+    font-family: "Baloo Chettan 2", cursive;
+    font-weight: 500;
+    color: #ff5252;
+    line-height: 100%;
+  }
+  &__type {
+    font-family: "Baloo Chettan 2", cursive;
+    width: 100%;
+    font-weight: 500;
+    text-align: right;
+    color: #616161;
+    font-size: 1.4rem;
+  }
+  &__descrip {
+    font-family: "Baloo Chettan 2", cursive;
+    color: #616161;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    line-height: 100%;
+  }
+  &__total {
+    margin-top: 2rem;
+    span {
+      font-weight: 500;
+      color: #ff5252;
+      font-size: 1.8rem;
+      font-family: "Poppins", sans-serif;
+    }
+  }
+}
+.container2 {
+  width: 100%;
+  height: auto;
+  background-position: center;
+  background-size: cover;
+  background-image: linear-gradient(
+      113.23deg,
+      rgba(57, 55, 55, 0.65) 10.84%,
+      rgba(72, 56, 56, 0.53) 88.86%
+    ),
+    url("../Pages/bgHome2.jpg");
+  @media only screen and (max-width: 56.25em) {
+    background-image: linear-gradient(
+        113.23deg,
+        rgba(57, 55, 55, 0.65) 10.84%,
+        rgba(72, 56, 56, 0.53) 88.86%
+      ),
+      url("../Pages/bgHome3.jpg");
+  }
+}
