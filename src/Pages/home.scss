@@ -55,6 +55,9 @@ h1 {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  @media only screen and (max-width: 56.25em) {
+    padding: 3rem 0;
+  }
 }
 .sectiontext {
   font-size: 2rem;
@@ -85,6 +88,9 @@ h1 {
   font-size: 1.4rem;
   height: 4rem;
   color: #ffffff;
+  @media only screen and (max-width: 56.25em) {
+    bottom: 3rem;
+  }
 }
 
 .booknow {

@@ -1,6 +1,7 @@
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import BookMass from "./Pages/book";
 import Home from "./Pages/home";
+import Register from "./Pages/register";
 
 function App() {
   return (
@@ -12,6 +13,9 @@ function App() {
           </Route>
           <Route exact path="/bookholymass">
             <BookMass />
+          </Route>
+          <Route exact path="/bookholymass/:id">
+            <Register />
           </Route>
         </Switch>
       </BrowserRouter>

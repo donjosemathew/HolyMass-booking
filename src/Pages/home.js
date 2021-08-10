@@ -1,6 +1,7 @@
 import React from "react";
 import "./home.scss";
 import Fade from "react-reveal/Fade";
+import { Link } from "react-router-dom";
 const Home = () => {
   return (
     <div className="home">
@@ -21,7 +22,9 @@ const Home = () => {
             </p>
           </Fade>
           <Fade>
-            <button className="booknow">BOOK HOLY MASS</button>
+            <Link to="/bookholymass">
+              <button className="booknow">BOOK HOLY MASS</button>
+            </Link>
           </Fade>
         </div>
         <p className="footerText">
