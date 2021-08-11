@@ -83,3 +83,21 @@
     background-color: #ff5252;
   }
 }
+.error {
+  margin: 0;
+  font-weight: 500;
+}
+.sucess {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  &__text {
+    color: #ffff;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    font-family: "Baloo Chettan 2", cursive;
+  }
+}

@@ -23,7 +23,7 @@ const BookMass = () => {
       });
       setQuerydata(querydatalist);
       setdataload(false);
-      console.log(querydatalist);
+
       //
     });
   }
@@ -32,11 +32,7 @@ const BookMass = () => {
   }, []); ////Get All Data
   /////////////////
   function NumberOfItems(total, data) {
-    let count = 0;
-    for (const [key, value] of Object.entries(data)) {
-      count++;
-    }
-    console.log(total - count);
+    let count = data.length;
     return total - count;
   }
   return (
@@ -71,10 +67,19 @@ const BookMass = () => {
                         <p className="item__total item__descrip">
                           ലഭ്യമായ സീറ്റുകൾ:{" "}
                           <span>
-                            {NumberOfItems(item.totalseats, item.register) < 10
+                            {NumberOfItems(
+                              item.totalseats,
+                              item.registeration
+                            ) < 10
                               ? "0" +
-                                NumberOfItems(item.totalseats, item.register)
-                              : NumberOfItems(item.totalseats, item.register)}
+                                NumberOfItems(
+                                  item.totalseats,
+                                  item.registeration
+                                )
+                              : NumberOfItems(
+                                  item.totalseats,
+                                  item.registeration
+                                )}
                           </span>
                         </p>
                         <div className="flexend">
