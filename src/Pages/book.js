@@ -84,12 +84,32 @@ const BookMass = () => {
                         </p>
                         <div className="flexend">
                           <button
-                            className="submit"
+                            className={
+                              NumberOfItems(
+                                item.totalseats,
+                                item.registeration
+                              ) <= 0
+                                ? "submit disabled"
+                                : "submit"
+                            }
                             onClick={() => {
                               history.push(`bookholymass/${item.uniqueid}`);
                             }}
+                            disabled={
+                              NumberOfItems(
+                                item.totalseats,
+                                item.registeration
+                              ) <= 0
+                                ? true
+                                : false
+                            }
                           >
-                            BOOK NOW
+                            {NumberOfItems(
+                              item.totalseats,
+                              item.registeration
+                            ) <= 0
+                              ? "NO SEATS AVAILABLE"
+                              : " BOOK NOW"}
                           </button>
                         </div>
                       </div>

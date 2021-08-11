@@ -10,6 +10,7 @@ import {
   MdStoreMallDirectory,
   MdPhone,
   MdCheckCircle,
+  MdArrowBack,
 } from "react-icons/md";
 import "./register.scss";
 import CircularProgress from "@material-ui/core/CircularProgress";
@@ -86,7 +87,11 @@ const BookMass = () => {
     } else {
       setOpen(true);
       const data =
-        name.replace(",", "") + " " + HouseName.replace(",", "") + "," + phone;
+        name.replaceAll(",", " ") +
+        " " +
+        HouseName.replaceAll(",", " ") +
+        "," +
+        phone;
       seterror("");
       ref
         .update({
@@ -107,6 +112,14 @@ const BookMass = () => {
   /////////////////
   return (
     <div className="home bookmass">
+      <div
+        className="floaticn"
+        onClick={() => {
+          history.push("/bookholymass");
+        }}
+      >
+        <MdArrowBack size="3em" color="#ffff" />
+      </div>
       <div className="container2">
         <div className="header">
           <Fade>
@@ -185,6 +198,7 @@ const BookMass = () => {
                         type="text"
                         className="input"
                         placeholder="Your House Name"
+                        autocomplete="off"
                         onChange={(e) => {
                           setHouseName(e.target.value);
                         }}
@@ -206,12 +220,24 @@ const BookMass = () => {
                     </div>{" "}
                     <p className="text error">{error}</p>
                     <button
-                      className="submit"
+                      className={
+                        NumberOfItems(
+                          querydata.totalseats,
+                          querydata.registeration
+                        ) <= 0
+                          ? "submit disabled"
+                          : "submit"
+                      }
                       onClick={() => {
                         AddData();
                       }}
                     >
-                      BOOK NOW
+                      {NumberOfItems(
+                        querydata.totalseats,
+                        querydata.registeration
+                      ) <= 0
+                        ? "NO SEATS AVAILABLE"
+                        : " BOOK NOW"}
                     </button>
                   </div>
                 ) : (
