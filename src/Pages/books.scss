@@ -108,3 +108,15 @@ h3 {
       url("../Pages/bgHome3.jpg");
   }
 }
+.flexend {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.centerDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 50vh;
+}

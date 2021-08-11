@@ -14,7 +14,7 @@ function App() {
           <Route exact path="/bookholymass">
             <BookMass />
           </Route>
-          <Route exact path="/bookholymass/:id">
+          <Route exact path="/bookholymass/:slug">
             <Register />
           </Route>
         </Switch>

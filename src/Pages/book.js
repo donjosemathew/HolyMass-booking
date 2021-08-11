@@ -4,7 +4,7 @@ import "./books.scss";
 import { MdDateRange } from "react-icons/md";
 import { db } from "../firebase/firebase";
 import { useHistory } from "react-router-dom";
-
+import CircularProgress from "@material-ui/core/CircularProgress";
 /////Import Firebase
 
 const BookMass = () => {
@@ -12,7 +12,7 @@ const BookMass = () => {
   //////////////////////////////////
   let history = useHistory();
   const ref = db.collection("holymass");
-
+  const [dataload, setdataload] = useState(true);
   const [querydata, setQuerydata] = useState([]);
 
   function getFirebaseQueryData() {
@@ -22,6 +22,7 @@ const BookMass = () => {
         querydatalist.push({ ...doc.data(), uniqueid: doc.id });
       });
       setQuerydata(querydatalist);
+      setdataload(false);
       console.log(querydatalist);
       //
     });
@@ -54,20 +55,14 @@ const BookMass = () => {
               {querydata
                 ? querydata.map((item) => {
                     return (
-                      <div
-                        className="item"
-                        key={item.uniqueid}
-                        onClick={() => {
-                          history.push(`bookholymass/${item.uniqueid}`);
-                        }}
-                      >
+                      <div className="item" key={item.uniqueid}>
                         <p className="item__date">
                           <MdDateRange />
                           {item.date}
                         </p>
                         <p className="item__datebig">{item.datemal}</p>
                         <p className="item__type">{item.massdesc}</p>
-                        <p className="item__descrip">സമയം:{item.massdesc}</p>
+                        <p className="item__descrip">സമയം:{item.time}</p>
 
                         <p className="item__available item__descrip">
                           മൊത്തം സീറ്റുകൾ:{item.totalseats}
@@ -82,12 +77,27 @@ const BookMass = () => {
                               : NumberOfItems(item.totalseats, item.register)}
                           </span>
                         </p>
+                        <div className="flexend">
+                          <button
+                            className="submit"
+                            onClick={() => {
+                              history.push(`bookholymass/${item.uniqueid}`);
+                            }}
+                          >
+                            BOOK NOW
+                          </button>
+                        </div>
                       </div>
                     );
                   })
                 : null}
             </div>
           </div>
+          {dataload ? (
+            <div className="centerDiv">
+              <CircularProgress color="secondary" />
+            </div>
+          ) : null}
         </div>
         <p className="footerText">
           Designed and Developed By <span>KCYM Kabanigiri</span>
