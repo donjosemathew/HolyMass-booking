@@ -1,0 +1,85 @@
+.register {
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  @media only screen and (max-width: 56.25em) {
+    display: block;
+  }
+  &__col1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 3rem;
+  }
+  &__col2 {
+    margin: 0 4rem;
+    background-color: #f5f5f507;
+    padding: 2rem;
+    @media only screen and (max-width: 56.25em) {
+      background-color: #f5f5f525;
+      margin: 0 2rem;
+      margin-top: 2rem;
+    }
+  }
+}
+.inputholder {
+  background-color: #ffff;
+  padding: 0.5rem 2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 70%;
+  @media only screen and (max-width: 56.25em) {
+    width: 80%;
+  }
+  &__icn {
+    color: rgb(78, 78, 78);
+    font-size: 2rem;
+  }
+}
+.input {
+  outline: none;
+  width: 100%;
+  border: none;
+  margin: 0.4rem 0.6rem;
+  font-size: 1.5rem;
+  font-family: inherit;
+  @media only screen and (max-width: 56.25em) {
+    font-size: 1.6rem;
+    margin: 0.5rem 0.6rem;
+  }
+}
+.text {
+  font-size: 1.6rem;
+  margin-top: 1rem;
+  color: #ffff;
+  margin-bottom: 0.3rem;
+  font-family: "Baloo Chettan 2", cursive;
+  span {
+    color: rgb(255, 65, 65);
+  }
+}
+.footerText2 {
+  @media only screen and (max-width: 56.25em) {
+    position: relative;
+    bottom: 0;
+  }
+}
+.submit {
+  padding: 0.7rem 2rem;
+  margin-top: 2rem;
+  outline: none;
+  border: none;
+  font-family: inherit;
+  font-size: 1.5rem;
+  font-weight: 500;
+  background-color: #ff5252e1;
+  color: #ffff;
+  transition: all 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
+  &:hover {
+    transform: scale(1.02);
+    cursor: pointer;
+    background-color: #ff5252;
+  }
+}

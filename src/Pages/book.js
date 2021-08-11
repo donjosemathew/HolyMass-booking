@@ -63,7 +63,7 @@ const BookMass = () => {
                 <p className="item__total item__descrip">
                   ലഭ്യമായ സീറ്റുകൾ: <span>04</span>
                 </p>
-              </div>{" "}
+              </div>
             </div>
           </div>
         </div>
